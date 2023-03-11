@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Frontend Mentor | Advice generator app</title>
+  <link rel="shortcut icon" href="./images/favicon-32x32.png" type="image/png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;800&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous" />
+  <link rel="stylesheet" href="./src/app.css" />
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"
+    defer></script>
+  <script src="./src/app.js" defer></script>
+</head>
+
+<body class="d-flex align-items-center justify-content-center flex-column p-3">
+  <main class="container mb-5">
+    <section class="card position-relative">
+      <div class="card-body">
+        <h1 class="card-title text-center text-uppercase d-none" id="advice-id"></h1>
+
+        <blockquote class="blockquote mt-4">
+          <p class="card-text text-center d-none" id="advice-text"></p>
+        </blockquote>
+
+        <div class="mb-3 spinner-container text-light">
+          <div class="spinner-border" role="status"></div>
+          <span>Loading</span>
+        </div>
+
+        <picture>
+          <source srcset="./images/pattern-divider-desktop.svg" media="(min-width: 758px)" type="image/svg+xml" />
+          <img src="./images/pattern-divider-mobile.svg" class="w-100" alt="dividing line" />
+        </picture>
+
+        <button class="border-0 position-absolute change-advice">
+          <span class="visually-hidden">Advice Changer</span>
+        </button>
+      </div>
+    </section>
+  </main>
+
+  <footer class="attribution">
+    <p class="text-white text-center">
+      Challenge by <a class="text-primary" href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend
+        Mentor</a>.
+      Coded by <strong>Mayur Dayal</strong>.
+    </p>
+  </footer>
+</body>
+
+</html>

@@ -1,0 +1,138 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --light-green: hsl(193, 38%, 86%);
+  --neon-green: hsl(150, 100%, 66%);
+  --grey-blue: hsl(216, 19%, 38%);
+  --dark-grey-blue: hsl(219, 19%, 24%);
+  --dark-blue: hsl(218, 23%, 16%);
+}
+html,
+body {
+  height: 100%;
+  font-size: 16px;
+  font-family: "Manrope", sans-serif;
+  font-weight: 800;
+}
+
+body {
+  background-color: var(--dark-blue);
+}
+
+.card {
+  width: 100%;
+  max-width: 380px;
+  margin: auto;
+  background-color: var(--dark-grey-blue);
+}
+
+.card-body {
+  padding: 2.5rem 1.5rem;
+}
+
+.card-title {
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.21rem;
+  color: var(--neon-green);
+}
+
+.card-text {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: var(--light-green);
+}
+
+p.card-text::before {
+  content: "“";
+}
+
+p.card-text::after {
+  content: "”";
+}
+
+picture img {
+  margin-bottom: 1rem;
+}
+
+button.change-advice {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  cursor: pointer;
+
+  background-color: var(--neon-green);
+  background-image: url("../images/icon-dice.svg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 1rem;
+  transition: all 800ms ease;
+
+  left: 50%;
+  bottom: 0;
+  transform: translate(-50%, 50%);
+}
+
+button.change-advice:hover {
+  box-shadow: 0 0 35px hsla(150, 100%, 66%, 0.5);
+}
+
+.spinner-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.attribution p {
+  font-weight: 400;
+  font-size: 0.75rem;
+}
+
+@media screen and (min-width: 768px) {
+  .card {
+    max-width: 415px;
+  }
+
+  .card-title,
+  .attribution p {
+    font-size: 0.875rem;
+  }
+
+  .card-text {
+    font-size: 1.5rem;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .card {
+    max-width: 450px;
+  }
+
+  .card-title,
+  .attribution p {
+    font-size: 1rem;
+  }
+
+  .card-body {
+    padding: 2.5rem;
+  }
+
+  .card-text {
+    font-size: 1.75rem;
+  }
+
+  picture img {
+    margin-bottom: 1.5rem;
+  }
+
+  button.change-advice {
+    width: 4rem;
+    height: 4rem;
+    background-size: 1.5rem;
+  }
+}
